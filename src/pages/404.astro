@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Layout
+  title="Page Not Found — AccelliTec"
+  description="The page you're looking for doesn't exist. Head back to AccelliTec's home page."
+  canonical="/404"
+>
+  <Nav />
+
+  <section style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 40px;position:relative;z-index:1;">
+    <div class="orb-404"></div>
+    <div>
+      <div class="code-label">404</div>
+      <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-0.03em;margin:20px 0 16px;">Page not found.</h1>
+      <p style="font-size:1rem;color:var(--muted2);line-height:1.75;max-width:440px;margin:0 auto 40px;">The URL you followed doesn't exist or may have moved. Try heading back to the home page.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="/" class="btn-primary">← Back to Home</a>
+        <a href="/contact" class="btn-ghost">Contact Us</a>
+      </div>
+      <div class="quick-links">
+        <div class="ql-label">Or go directly to</div>
+        <div class="ql-row">
+          <a href="/services">Services</a>
+          <a href="/training">Training</a>
+          <a href="/webinar">Webinar</a>
+          <a href="/products">Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid var(--border);text-align:center;padding:24px;position:relative;z-index:1;">
+    <a href="/" style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted);text-decoration:none;">← AccelliTec Home</a>
+  </footer>
+</Layout>
+
+<style>
+  .orb-404 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,200,255,0.06) 0%, transparent 70%);
+    filter: blur(80px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .code-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(5rem, 12vw, 9rem);
+    font-weight: 500;
+    line-height: 1;
+    background: linear-gradient(120deg, var(--cyan) 0%, #7DF9FF 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+  }
+  .quick-links {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .ql-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .ql-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .ql-row a {
+    font-size: 0.88rem;
+    color: var(--cyan);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+  }
+  .ql-row a:hover { opacity: 0.7; }
+</style>

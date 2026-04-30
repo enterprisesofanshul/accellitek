@@ -8,6 +8,7 @@ interface Props {
   ogDescription?: string;
   ogImage?: string;
   canonical?: string;
+  robots?: string;
   schema?: object;
 }
 
@@ -16,8 +17,9 @@ const {
   description,
   ogTitle,
   ogDescription,
-  ogImage = '/og-image.jpg',
+  ogImage = '/AccelliTec_OG_1200x630.png',
   canonical,
+  robots = 'index, follow',
   schema,
 } = Astro.props;
 
@@ -32,10 +34,15 @@ const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/AccelliTec_favicon.ico" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/AccelliTec_favicon_512x512.png" />
+  <link rel="apple-touch-icon" href="/AccelliTec_apple_touch_icon.png" />
+
   <!-- Primary Meta Tags -->
   <title>{title}</title>
   <meta name="description" content={description} />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={robots} />
   <link rel="canonical" href={canonicalUrl} />
 
   <!-- Open Graph / LinkedIn / Facebook -->
@@ -64,7 +71,7 @@ const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
     "@type": "Organization",
     "name": "AccelliTec",
     "url": siteUrl,
-    "logo": `${siteUrl}/og-image.jpg`,
+    "logo": `${siteUrl}/AccelliTec_Logo_300x300.png`,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-96673-79021",

@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Cloud and AI Consulting",
+  "provider": {
+    "@type": "Organization",
+    "name": "AccelliTec",
+    "url": "https://accellitec.com"
+  },
+  "areaServed": "India",
+  "description": "AWS cloud migration, GenAI integration, DevOps pipeline setup, cloud cost optimisation, and Fractional CTO services for enterprises.",
+  "offers": [
+    { "@type": "Offer", "name": "Cloud & AI Consulting", "price": "75000", "priceCurrency": "INR" },
+    { "@type": "Offer", "name": "Corporate Training", "price": "150000", "priceCurrency": "INR" }
+  ]
+};
+---
+
+<Layout
+  title="Cloud & AI Consulting Services — AccelliTec India"
+  description="AWS cloud migration, GenAI integration, DevOps, and Fractional CTO services for startups and enterprises. Starting at ₹75,000. 18+ years enterprise experience."
+  canonical="/services"
+  schema={schema}
+>
+  <Nav />
+
+  <section style="background:var(--bg);position:relative;z-index:1;">
+    <div class="wrap">
+      <div class="services-header">
+        <div>
+          <p class="s-label reveal">What We Do</p>
+          <h1 class="s-title reveal">Three practice areas.<br/>One firm.</h1>
+        </div>
+        <p class="s-sub reveal" style="max-width:320px;">Whether you're a startup, enterprise, or individual professional — AccelliTec has an engagement model built for you.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="svc reveal">
+          <div class="svc-bar"></div>
+          <span class="svc-num">01 / CONSULTING</span>
+          <span class="svc-icon">☁️</span>
+          <span class="svc-tag">For Companies</span>
+          <div class="svc-name">Cloud & AI Consulting</div>
+          <p class="svc-desc">End-to-end cloud transformation and GenAI integration — designed and delivered with enterprise-grade rigour.</p>
+          <ul class="svc-list">
+            <li>AWS cloud migration & architecture</li>
+            <li>GenAI & AI-ML product integration</li>
+            <li>Cloud cost audits & optimisation</li>
+            <li>DevOps & CI/CD pipeline setup</li>
+            <li>Fractional CTO / Tech Advisory</li>
+          </ul>
+          <div class="svc-price">Starting at ₹75,000 per engagement</div>
+        </div>
+
+        <div class="svc reveal d1">
+          <div class="svc-bar"></div>
+          <span class="svc-num">02 / TRAINING</span>
+          <span class="svc-icon">🎓</span>
+          <span class="svc-tag">For Professionals</span>
+          <div class="svc-name">Cohort Bootcamps</div>
+          <p class="svc-desc">Weekend cohorts taught by practitioners. Small batches. Real mentorship. No pre-recorded lectures. Hindi + English.</p>
+          <ul class="svc-list">
+            <li>AI/ML Masterclass (4 weeks)</li>
+            <li>GenAI & Prompt Engineering (4 weeks)</li>
+            <li>Python for Data Engineering (6 weeks)</li>
+            <li>System Design for Senior Engineers</li>
+            <li>DevOps & CI/CD Masterclass</li>
+          </ul>
+          <div class="svc-price">₹10,000 – ₹20,000 per cohort</div>
+        </div>
+
+        <div class="svc reveal d2">
+          <div class="svc-bar"></div>
+          <span class="svc-num">03 / ENTERPRISE</span>
+          <span class="svc-icon">🏢</span>
+          <span class="svc-tag">For Enterprises</span>
+          <div class="svc-name">Corporate Training</div>
+          <p class="svc-desc">Custom 2–3 day intensive programmes for engineering teams. Designed around your stack. Delivered on-site or virtually.</p>
+          <ul class="svc-list">
+            <li>AI/ML adoption & integration workshops</li>
+            <li>GenAI for enterprise teams</li>
+            <li>AWS certification prep for teams</li>
+            <li>Cloud & microservices modernisation</li>
+            <li>Custom curriculum available</li>
+          </ul>
+          <div class="svc-price">₹1,50,000 – ₹3,00,000 per engagement</div>
+        </div>
+      </div>
+
+      <!-- FAQ for SEO + Google Ads Quality Score -->
+      <div style="margin-top:80px;">
+        <p class="s-label reveal">FAQ</p>
+        <h2 class="s-title reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:40px;">Common questions</h2>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <div class="faq-q">Do you work with early-stage startups or only large enterprises?</div>
+            <div class="faq-a">Both. Our consulting engagements are scoped to your stage — a startup gets a lean, pragmatic architecture; an enterprise gets full governance and compliance rigour. We adapt to your context.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">How long does a typical cloud migration project take?</div>
+            <div class="faq-a">Depends on scope. A focused workload migration (one application, one team) typically takes 4–8 weeks. A full platform modernisation is 3–6 months. We always begin with a free discovery call to scope accurately.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">What is a Fractional CTO and who needs it?</div>
+            <div class="faq-a">A Fractional CTO gives you senior technology leadership — architecture decisions, team hiring, vendor evaluation, roadmap setting — without the cost of a full-time hire. Ideal for startups scaling past their first technical team, or companies between CTOs.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Do you offer ongoing retainer engagements?</div>
+            <div class="faq-a">Yes. Many clients retain AccelliTec on a monthly basis for ongoing advisory, architecture reviews, and team mentoring. Contact us to discuss retainer options.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:64px;text-align:center;" class="reveal">
+        <p style="color:var(--muted2);margin-bottom:24px;font-size:1rem;">Ready to get started? Book a free 30-minute discovery call.</p>
+        <a href="https://calendly.com/accellitec" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .services-header { display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:40px; }
+  .faq-list { display:flex;flex-direction:column;gap:0; }
+  .faq-item { padding:24px 0;border-bottom:1px solid var(--border); }
+  .faq-item:first-child { border-top:1px solid var(--border); }
+  .faq-q { font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:12px;color:var(--text); }
+  .faq-a { font-size:0.92rem;color:var(--muted2);line-height:1.75; }
+  @media(max-width:960px){ .services-header{flex-direction:column;align-items:flex-start;} }
+</style>

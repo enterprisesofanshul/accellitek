@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "AccelliTec Training Programmes",
+  "itemListElement": [
+    {
+      "@type": "Course",
+      "position": 1,
+      "name": "AI/ML Masterclass",
+      "description": "4-week weekend cohort covering AI/ML fundamentals, GenAI & LLMs, and hands-on Python project. Taught in Hindi and English.",
+      "provider": { "@type": "Organization", "name": "AccelliTec", "url": "https://accellitec.com" },
+      "offers": { "@type": "Offer", "price": "18000", "priceCurrency": "INR" },
+      "inLanguage": ["hi", "en"],
+      "courseMode": "online"
+    },
+    {
+      "@type": "Course",
+      "position": 2,
+      "name": "AWS Solutions Architect Bootcamp",
+      "description": "6-week weekend bootcamp for AWS Solutions Architect certification preparation.",
+      "provider": { "@type": "Organization", "name": "AccelliTec", "url": "https://accellitec.com" },
+      "offers": { "@type": "Offer", "price": "18000", "priceCurrency": "INR" },
+      "inLanguage": ["hi", "en"],
+      "courseMode": "online"
+    }
+  ]
+};
+---
+
+<Layout
+  title="AI/ML & AWS Training Cohorts in India — AccelliTec"
+  description="Weekend cohort bootcamps taught by enterprise practitioners. AI/ML Masterclass, AWS Solutions Architect, Python Data Engineering, System Design. Hindi & English. ₹10,000–₹20,000."
+  canonical="/training"
+  schema={schema}
+>
+  <Nav />
+
+  <section style="background:var(--surface);position:relative;z-index:1;">
+    <div class="wrap">
+      <p class="s-label reveal">Training Programmes</p>
+      <h1 class="s-title reveal">Learn from engineers who<br/>shipped it in production</h1>
+      <p class="s-sub reveal">AccelliTec cohorts are intentionally small, mentor-led, and grounded in real enterprise projects — not textbook theory. Delivered in Hindi & English.</p>
+
+      <div class="cohort-layout">
+        <div class="featured-cohort reveal">
+          <div class="fc-head">
+            <div>
+              <div class="fc-label">Flagship Programme</div>
+              <div class="fc-name">AI/ML Masterclass</div>
+            </div>
+            <div class="fc-badge">Enrolling Now</div>
+          </div>
+          <div class="fc-body">
+            <div class="fc-meta">
+              <div><div class="meta-k">Duration</div><div class="meta-v">4 Weeks</div></div>
+              <div><div class="meta-k">Schedule</div><div class="meta-v">Weekends Only</div></div>
+              <div><div class="meta-k">Language</div><div class="meta-v">Hindi + English</div></div>
+              <div><div class="meta-k">Batch Size</div><div class="meta-v">Max 15 seats</div></div>
+            </div>
+            <div class="fc-weeks">
+              <div class="week-row"><span class="wk">W1</span> What is AI/ML — concepts, landscape & real-world use cases</div>
+              <div class="week-row"><span class="wk">W2</span> ML Fundamentals — supervised, unsupervised, reinforcement learning</div>
+              <div class="week-row"><span class="wk">W3</span> GenAI & LLMs — how they work, prompt engineering, tools</div>
+              <div class="week-row"><span class="wk">W4</span> Building your first AI/ML project — Python, hands-on lab & roadmap</div>
+            </div>
+            <div class="fc-pricing">
+              <span class="fc-price">₹18,000</span>
+              <span class="fc-price-note">per seat · includes hands-on labs & study material</span>
+            </div>
+            <a href="https://wa.me/919667379021" target="_blank" rel="noopener" class="btn-primary" style="display:block;text-align:center;">Reserve Your Seat →</a>
+          </div>
+        </div>
+
+        <div class="reveal d1">
+          <p class="s-label" style="margin-bottom:18px;">More Programmes</p>
+          <div class="other-cohorts">
+            <div class="oc">
+              <div class="oc-name">AWS Solutions Architect Bootcamp</div>
+              <div class="oc-meta">
+                <span class="oc-pill">6 Weeks</span>
+                <span class="oc-pill">Weekends</span>
+                <span class="oc-pill price">₹18,000</span>
+                <span class="oc-pill">Hindi + English</span>
+              </div>
+            </div>
+            <div class="oc">
+              <div class="oc-name">Python for Data Engineering</div>
+              <div class="oc-meta">
+                <span class="oc-pill">6 Weeks</span>
+                <span class="oc-pill">Weekends</span>
+                <span class="oc-pill price">₹10,000</span>
+                <span class="oc-pill">Hindi + English</span>
+              </div>
+            </div>
+            <div class="oc">
+              <div class="oc-name">System Design for Senior Engineers</div>
+              <div class="oc-meta">
+                <span class="oc-pill">4 Weeks</span>
+                <span class="oc-pill">Weekends</span>
+                <span class="oc-pill price">₹20,000</span>
+                <span class="oc-pill">English</span>
+              </div>
+            </div>
+            <div class="oc">
+              <div class="oc-name">DevOps & CI/CD Masterclass</div>
+              <div class="oc-meta">
+                <span class="oc-pill">3 Weeks</span>
+                <span class="oc-pill">Weekends</span>
+                <span class="oc-pill price">₹8,000</span>
+                <span class="oc-pill">Hindi + English</span>
+              </div>
+            </div>
+          </div>
+          <a href="/contact" class="btn-ghost" style="display:block;text-align:center;margin-top:18px;">Get Notified for All Batches</a>
+
+          <div style="margin-top:32px;padding:24px;background:var(--bg);border:1px solid var(--border);border-radius:12px;">
+            <div class="s-label" style="margin-bottom:12px;">Corporate Training</div>
+            <p style="font-size:0.88rem;color:var(--muted2);line-height:1.7;margin-bottom:16px;">Need training for your whole team? AccelliTec delivers custom 2–3 day intensive programmes for engineering organisations. Tailored to your stack. On-site or online.</p>
+            <a href="/contact" class="btn-primary" style="display:block;text-align:center;font-size:0.85rem;padding:12px;">Enquire About Corporate Training</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="margin-top:80px;">
+        <p class="s-label reveal">FAQ</p>
+        <h2 class="s-title reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:40px;">Training questions answered</h2>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <div class="faq-q">Are the sessions live or pre-recorded?</div>
+            <div class="faq-a">All sessions are live and interactive. No pre-recorded lectures. You learn alongside a small batch with direct access to the instructor.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Do I need prior experience to join the AI/ML Masterclass?</div>
+            <div class="faq-a">Basic familiarity with technology helps, but no AI/ML background is required. Week 1 starts from scratch. Python basics are useful for Week 4, but we'll point you to prep material after enrollment.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Are sessions in Hindi or English?</div>
+            <div class="faq-a">Most cohorts are delivered in a mix of Hindi and English — explained in Hindi for comfort, technical terms in English. System Design for Senior Engineers is English-only.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Will I get a certificate after completing the course?</div>
+            <div class="faq-a">Yes, AccelliTec issues a completion certificate for all cohorts. For AWS-specific bootcamps, we also prepare you for the official AWS certification exam.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .cohort-layout { display:grid;grid-template-columns:1.15fr 1fr;gap:36px;margin-top:60px;align-items:start; }
+  .featured-cohort { background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden; }
+  .fc-head { padding:28px 32px;background:linear-gradient(135deg,#040C1C 0%,#071830 100%);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start; }
+  .fc-label { font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;color:var(--cyan);text-transform:uppercase;margin-bottom:8px; }
+  .fc-name { font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700; }
+  .fc-badge { background:var(--cyan-dim);border:1px solid var(--border-strong);color:var(--cyan);font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;white-space:nowrap; }
+  .fc-body { padding:28px 32px; }
+  .fc-meta { display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px; }
+  .meta-k { font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px; }
+  .meta-v { font-size:0.9rem;font-weight:500; }
+  .fc-weeks { display:flex;flex-direction:column;gap:10px;margin-bottom:28px; }
+  .week-row { display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--surface);border-radius:7px;font-size:0.85rem;color:var(--muted2); }
+  .wk { font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--cyan);background:var(--cyan-dim);padding:2px 8px;border-radius:4px;flex-shrink:0; }
+  .fc-pricing { display:flex;align-items:baseline;gap:10px;padding:16px 18px;background:var(--gold-dim);border:1px solid rgba(245,200,66,0.18);border-radius:8px;margin-bottom:20px; }
+  .fc-price { font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--gold); }
+  .fc-price-note { font-size:0.8rem;color:var(--muted); }
+  .other-cohorts { display:flex;flex-direction:column;gap:14px; }
+  .oc { background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:18px 22px;transition:border-color 0.25s,transform 0.2s; }
+  .oc:hover { border-color:var(--border-strong);transform:translateX(3px); }
+  .oc-name { font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:8px; }
+  .oc-meta { display:flex;gap:8px;flex-wrap:wrap; }
+  .oc-pill { font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.07em;color:var(--muted);background:var(--surface2);padding:3px 10px;border-radius:100px; }
+  .oc-pill.price { color:var(--gold);background:var(--gold-dim); }
+  .faq-list { display:flex;flex-direction:column;gap:0; }
+  .faq-item { padding:24px 0;border-bottom:1px solid var(--border); }
+  .faq-item:first-child { border-top:1px solid var(--border); }
+  .faq-q { font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:12px;color:var(--text); }
+  .faq-a { font-size:0.92rem;color:var(--muted2);line-height:1.75; }
+  @media(max-width:960px){ .cohort-layout{grid-template-columns:1fr;} }
+</style>

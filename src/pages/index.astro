@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AccelliTec",
+  "description": "Enterprise cloud consulting and AI/ML training firm. AWS migration, GenAI integration, and technology upskilling in India and globally.",
+  "url": "https://accellitec.com",
+  "telephone": "+91-96673-79021",
+  "email": "info@accellitec.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Anshul Goyal",
+    "jobTitle": "Founder & Principal Consultant"
+  },
+  "areaServed": ["India", "United States", "Australia"],
+  "serviceType": ["Cloud Consulting", "AI Training", "Corporate Training", "Fractional CTO"]
+};
+---
+
+<Layout
+  title="AccelliTec — Cloud & AI Consulting | AWS & AI Training in India"
+  description="Enterprise-grade cloud consulting and AI/ML training. AWS migration, GenAI integration, and upskilling cohorts taught in Hindi & English. 18+ years of enterprise experience."
+  canonical="/"
+  schema={schema}
+>
+  <Nav />
+
+  <!-- HERO -->
+  <section id="hero" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 40px 140px;overflow:hidden;position:relative;z-index:1;">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-eyebrow">
+      <div class="live-dot"></div>
+      Cloud · AI · Upskilling — India & Global
+    </div>
+
+    <div class="hero-firm-name">Accelli<span>Tec</span> &nbsp;·&nbsp; Technology Consulting & Training</div>
+
+    <h1 class="hero-headline">
+      Enterprise depth. Deliver Fast.<br/>
+      <span class="gradient">No shortcuts.</span>
+    </h1>
+
+    <p class="hero-tagline">
+      Enterprise-grade cloud consulting and AI-powered upskilling —<br/>
+      built on 18+ years of delivering for global financial services and enterprise clients.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://calendly.com/accellitec" target="_blank" rel="noopener" class="btn-primary">Book a Free Discovery Call</a>
+      <a href="/services" class="btn-ghost">Explore Our Services →</a>
+    </div>
+
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-val">18+</span>
+        <span class="metric-label">Years Enterprise Experience</span>
+      </div>
+      <div class="metric">
+        <span class="metric-val">AWS</span>
+        <span class="metric-label">Certified Architect</span>
+      </div>
+      <div class="metric">
+        <span class="metric-val">AI/ML</span>
+        <span class="metric-label">IIIT Bangalore</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <div class="t-item"><b>AWS Cloud Migration</b> ◆</div>
+      <div class="t-item"><b>GenAI Integration</b> ◆</div>
+      <div class="t-item"><b>Python Data Engineering</b> ◆</div>
+      <div class="t-item"><b>System Design</b> ◆</div>
+      <div class="t-item"><b>DevOps & CI/CD</b> ◆</div>
+      <div class="t-item"><b>AI/ML Masterclass</b> ◆</div>
+      <div class="t-item"><b>Cloud Architecture Review</b> ◆</div>
+      <div class="t-item"><b>Corporate Tech Training</b> ◆</div>
+      <div class="t-item"><b>Fractional CTO</b> ◆</div>
+      <div class="t-item"><b>Microservices & Platform Design</b> ◆</div>
+      <div class="t-item"><b>AWS Cloud Migration</b> ◆</div>
+      <div class="t-item"><b>GenAI Integration</b> ◆</div>
+      <div class="t-item"><b>Python Data Engineering</b> ◆</div>
+      <div class="t-item"><b>System Design</b> ◆</div>
+      <div class="t-item"><b>DevOps & CI/CD</b> ◆</div>
+      <div class="t-item"><b>AI/ML Masterclass</b> ◆</div>
+      <div class="t-item"><b>Cloud Architecture Review</b> ◆</div>
+      <div class="t-item"><b>Corporate Tech Training</b> ◆</div>
+      <div class="t-item"><b>Fractional CTO</b> ◆</div>
+      <div class="t-item"><b>Microservices & Platform Design</b> ◆</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" style="background:var(--surface);position:relative;z-index:1;">
+    <div class="wrap">
+      <p class="s-label reveal">About AccelliTec</p>
+      <h2 class="s-title reveal">Not a typical consultancy.<br/>We've actually built it.</h2>
+
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p class="about-para">
+            <strong>AccelliTec</strong> is a technology consulting and training firm founded on a simple belief: the best advisors are practitioners — people who have designed, built, and shipped the systems they now help others create.
+          </p>
+          <p class="about-para">
+            We work with companies navigating cloud migrations, AI adoption, and platform modernisation — and with professionals and teams looking to upskill in the technologies that define the next decade.
+          </p>
+          <p class="about-para">
+            Our edge is <strong>real enterprise depth</strong>. Every engagement is grounded in hands-on experience across AWS, GCP, Python, AI/ML, and large-scale microservices — not theoretical frameworks.
+          </p>
+          <p class="about-para">
+            We deliver in <strong>Hindi and English</strong>, making world-class expertise accessible to companies and professionals beyond the metros.
+          </p>
+          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="/services" class="btn-primary" style="padding:12px 28px;font-size:0.88rem;">Our Services →</a>
+            <a href="/training" class="btn-ghost" style="padding:12px 28px;font-size:0.88rem;">Training Programmes →</a>
+          </div>
+        </div>
+
+        <div class="about-right reveal d1">
+          <div class="founder-card">
+            <div class="founder-header">
+              <div class="founder-avatar">👨‍💻</div>
+              <div>
+                <div class="founder-name">Anshul Goyal</div>
+                <div class="founder-role">Founder & Principal Consultant</div>
+                <div class="founder-company">18+ Yrs · Global Financial Services · Enterprise Tech</div>
+              </div>
+            </div>
+            <div class="founder-certs">
+              <div class="cert-row"><span class="cert-icon2">🏅</span><div><strong>AWS Certified</strong> Solutions Architect — Associate</div></div>
+              <div class="cert-row"><span class="cert-icon2">🤖</span><div><strong>AI/ML Certified</strong> — IIIT Bangalore</div></div>
+              <div class="cert-row"><span class="cert-icon2">🔄</span><div><strong>Apache Airflow</strong> — Astronomer Certified</div></div>
+              <div class="cert-row"><span class="cert-icon2">🌍</span><div><strong>Global Delivery</strong> — Teams across India, US & Australia</div></div>
+              <div class="cert-row"><span class="cert-icon2">🏗️</span><div><strong>Enterprise Scale</strong> — Platforms serving millions of users</div></div>
+            </div>
+          </div>
+
+          <div class="pillars" style="margin-top:20px;">
+            <div class="pillar">
+              <div class="pillar-icon">🏗️</div>
+              <div><div class="pillar-name">Enterprise-First Thinking</div><div class="pillar-desc">Every solution is designed for scale, resilience, and real-world constraints — not demos.</div></div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🎯</div>
+              <div><div class="pillar-name">Outcome-Oriented</div><div class="pillar-desc">We measure success by your results — certifications passed, migrations completed, revenue unlocked.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS TO OTHER PAGES -->
+  <section style="background:var(--bg);position:relative;z-index:1;">
+    <div class="wrap" style="padding-top:60px;padding-bottom:60px;">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <a href="/services" style="display:block;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:border-color 0.25s,transform 0.2s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:1.8rem;margin-bottom:12px;">☁️</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:8px;">Cloud & AI Consulting</div>
+          <div style="font-size:0.83rem;color:var(--muted);line-height:1.6;">AWS migration, GenAI integration, DevOps, Fractional CTO</div>
+        </a>
+        <a href="/training" style="display:block;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:border-color 0.25s,transform 0.2s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:1.8rem;margin-bottom:12px;">🎓</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:8px;">Training Cohorts</div>
+          <div style="font-size:0.83rem;color:var(--muted);line-height:1.6;">AI/ML, AWS, Python, System Design — Hindi & English</div>
+        </a>
+        <a href="/products" style="display:block;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:12px;text-decoration:none;transition:border-color 0.25s,transform 0.2s;" onmouseover="this.style.borderColor='var(--border-strong)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="font-size:1.8rem;margin-bottom:12px;">📦</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:8px;">Software Products</div>
+          <div style="font-size:0.83rem;color:var(--muted);line-height:1.6;">WMS and enterprise software built on cloud-native stack</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .orb { position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0; }
+  .orb-1 { width:700px;height:500px;background:radial-gradient(ellipse,rgba(0,200,255,0.09) 0%,transparent 70%);top:-60px;left:50%;transform:translateX(-50%);animation:pulse1 10s ease-in-out infinite; }
+  .orb-2 { width:350px;height:350px;background:radial-gradient(circle,rgba(245,200,66,0.055) 0%,transparent 70%);bottom:80px;right:5%;animation:pulse2 14s ease-in-out infinite; }
+  .orb-3 { width:280px;height:280px;background:radial-gradient(circle,rgba(0,229,160,0.05) 0%,transparent 70%);bottom:60px;left:5%;animation:pulse2 18s ease-in-out infinite reverse; }
+  @keyframes pulse1 { 0%,100%{transform:translateX(-50%) scale(1);}50%{transform:translateX(-50%) scale(1.12);} }
+  @keyframes pulse2 { 0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.18);opacity:0.7;} }
+  .hero-eyebrow { position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px;background:var(--surface2);border:1px solid var(--border-strong);border-radius:100px;padding:7px 18px;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--muted2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:36px;animation:fadeup 0.9s ease both; }
+  .live-dot { width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 2.5s ease-in-out infinite; }
+  @keyframes blink { 0%,100%{opacity:1;}50%{opacity:0.25;} }
+  .hero-firm-name { position:relative;z-index:1;font-family:'Syne',sans-serif;font-size:clamp(1rem,2vw,1.3rem);font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;animation:fadeup 0.9s 0.05s ease both; }
+  .hero-firm-name span { color:var(--cyan); }
+  .hero-headline { position:relative;z-index:1;font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.5vw,3rem);line-height:1.1;letter-spacing:-0.025em;margin-bottom:28px;animation:fadeup 0.9s 0.1s ease both; }
+  .hero-headline .gradient { display:block;background:linear-gradient(120deg,var(--cyan) 0%,#7DF9FF 40%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+  .hero-tagline { position:relative;z-index:1;font-size:clamp(1rem,1.8vw,1.2rem);color:var(--muted2);font-weight:300;line-height:1.75;max-width:600px;margin:0 auto 44px;animation:fadeup 0.9s 0.18s ease both; }
+  .hero-actions { position:relative;z-index:1;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeup 0.9s 0.26s ease both; }
+  .hero-metrics { position:relative;z-index:1;display:flex;gap:0;justify-content:center;margin-top:72px;flex-wrap:nowrap;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--surface);max-width:600px;margin-left:auto;margin-right:auto;animation:fadeup 0.9s 0.34s ease both; }
+  .metric { flex:1;min-width:140px;padding:28px 20px;text-align:center;border-right:1px solid var(--border); }
+  .metric:last-child { border-right:none; }
+  .metric-val { font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--cyan);letter-spacing:-0.03em;display:block;line-height:1; }
+  .metric-label { font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:8px; }
+  @keyframes fadeup { from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);} }
+  .about-grid { display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:64px;align-items:start; }
+  .about-para { font-size:1rem;color:var(--muted2);line-height:1.8;margin-bottom:20px; }
+  .about-para strong { color:var(--text);font-weight:600; }
+  .founder-card { background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:32px; }
+  .founder-header { display:flex;gap:18px;align-items:flex-start;padding-bottom:24px;border-bottom:1px solid var(--border);margin-bottom:24px; }
+  .founder-avatar { width:60px;height:60px;border-radius:12px;background:linear-gradient(135deg,var(--cyan-dim),var(--surface2));border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0; }
+  .founder-name { font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:4px; }
+  .founder-role { font-size:0.82rem;color:var(--cyan);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em; }
+  .founder-company { font-size:0.8rem;color:var(--muted);margin-top:2px; }
+  .founder-certs { display:flex;flex-direction:column;gap:10px; }
+  .cert-row { display:flex;align-items:center;gap:12px;font-size:0.85rem;color:var(--muted2); }
+  .cert-icon2 { font-size:1rem; }
+  .cert-row strong { color:var(--text);font-weight:500; }
+  .pillars { display:flex;flex-direction:column;gap:16px;margin-top:8px; }
+  .pillar { background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start;transition:border-color 0.25s,transform 0.25s; }
+  .pillar:hover { border-color:var(--border-strong);transform:translateX(4px); }
+  .pillar-icon { font-size:1.4rem;flex-shrink:0;margin-top:2px; }
+  .pillar-name { font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:6px; }
+  .pillar-desc { font-size:0.85rem;color:var(--muted);line-height:1.6; }
+  @media(max-width:960px){
+    .about-grid { grid-template-columns:1fr; }
+    .hero-metrics { flex-wrap:wrap; }
+    .metric { min-width:50%; }
+  }
+</style>

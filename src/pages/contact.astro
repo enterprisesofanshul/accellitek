@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Contact AccelliTec — Cloud Consulting & AI Training India"
+  description="Get in touch with AccelliTec. Book a free 30-minute discovery call, email us, or WhatsApp. We respond within 24 hours."
+  canonical="/contact"
+>
+  <Nav />
+
+  <section style="background:var(--surface);position:relative;z-index:1;">
+    <div class="wrap">
+      <p class="s-label reveal">Get In Touch</p>
+      <h1 class="s-title reveal">Let's talk about<br/>your next move</h1>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="contact-intro">Whether you're a company exploring cloud transformation, a professional ready to upskill, or an enterprise looking to train your team — AccelliTec is ready to help. We respond within 24 hours.</p>
+          <div class="contact-methods">
+            <a href="mailto:info@accellitec.com" class="c-method">
+              <span class="c-icon">✉️</span>
+              <div><div class="c-label">Email Us</div><div class="c-val">info@accellitec.com</div></div>
+            </a>
+            <a href="https://wa.me/919667379021" target="_blank" rel="noopener" class="c-method">
+              <span class="c-icon">💬</span>
+              <div><div class="c-label">WhatsApp</div><div class="c-val">+91 96673 79021</div></div>
+            </a>
+            <a href="https://linkedin.com/in/anshul-goyal13" target="_blank" rel="noopener" class="c-method">
+              <span class="c-icon">💼</span>
+              <div><div class="c-label">LinkedIn</div><div class="c-val">Anshul Goyal — Founder, AccelliTec</div></div>
+            </a>
+            <a href="https://calendly.com/accellitec" target="_blank" rel="noopener" class="c-method">
+              <span class="c-icon">📅</span>
+              <div><div class="c-label">Book a Discovery Call</div><div class="c-val">Free · 30 minutes · No obligation</div></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal d1">
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="cf-title">Send AccelliTec a message</div>
+            <div class="fg"><label>Your Name</label><input name="name" type="text" placeholder="Rahul Sharma" required /></div>
+            <div class="fg"><label>Email or WhatsApp</label><input name="email" type="text" placeholder="rahul@company.com" required /></div>
+            <div class="fg">
+              <label>I'm enquiring about</label>
+              <select name="enquiry">
+                <option>Cloud / AI Consulting (Company)</option>
+                <option>AWS Bootcamp — Individual Enrolment</option>
+                <option>Corporate Training for My Team</option>
+                <option>Webinar Registration</option>
+                <option>Fractional CTO / Advisory</option>
+                <option>WMS Product Enquiry</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Tell us more</label><textarea name="message" placeholder="What are you working on? What challenge can AccelliTec help solve?"></textarea></div>
+            <button type="submit" class="btn-submit">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .contact-grid { display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:60px;align-items:start; }
+  .contact-intro { font-size:1rem;color:var(--muted2);line-height:1.8;margin-bottom:36px; }
+  .contact-methods { display:flex;flex-direction:column;gap:14px; }
+  .c-method { display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--bg);border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:border-color 0.25s,transform 0.2s; }
+  .c-method:hover { border-color:var(--border-strong);transform:translateX(4px); }
+  .c-icon { font-size:1.2rem;flex-shrink:0; }
+  .c-label { font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px; }
+  .c-val { font-size:0.9rem;color:var(--text);font-weight:500; }
+  .contact-form { background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:36px; }
+  .cf-title { font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:24px; }
+  @media(max-width:960px){ .contact-grid{grid-template-columns:1fr;} }
+</style>

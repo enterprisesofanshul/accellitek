@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AccelliTec WMS",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cloud",
+  "description": "Cloud-native Warehouse Management System built for modern logistics and supply chain operations.",
+  "provider": { "@type": "Organization", "name": "AccelliTec", "url": "https://accellitec.com" },
+  "offers": { "@type": "Offer", "availability": "https://schema.org/PreOrder", "priceCurrency": "INR" }
+};
+---
+
+<Layout
+  title="WMS — Cloud-Native Warehouse Management System | AccelliTec"
+  description="AccelliTec WMS: a cloud-native Warehouse Management System built for modern logistics operations. Inventory tracking, order fulfilment, real-time reporting. Coming soon."
+  canonical="/products"
+  schema={schema}
+>
+  <Nav />
+
+  <section style="background:var(--bg);position:relative;z-index:1;">
+    <div class="wrap">
+      <p class="s-label reveal">Products</p>
+      <h1 class="s-title reveal">Software built on<br/>enterprise experience</h1>
+      <p class="s-sub reveal">AccelliTec builds cloud-native software products grounded in 18+ years of enterprise architecture. Production-grade, scalable, and designed for real operational complexity.</p>
+
+      <!-- WMS Product Card -->
+      <div class="product-card reveal" style="margin-top:60px;">
+        <div class="product-header">
+          <div class="product-icon">📦</div>
+          <div>
+            <div class="product-tag">Warehouse Management System</div>
+            <h2 class="product-name">AccelliTec WMS</h2>
+            <div class="product-badge">Coming Soon</div>
+          </div>
+        </div>
+
+        <p class="product-desc">
+          A cloud-native Warehouse Management System built for modern logistics and supply chain operations. Designed with enterprise-grade architecture — scalable, reliable, and built to handle real operational complexity from day one.
+        </p>
+
+        <div class="product-features">
+          <div class="feature-group">
+            <div class="feature-group-title">Core Capabilities</div>
+            <ul class="feature-list">
+              <li>Real-time inventory tracking and stock management</li>
+              <li>Order fulfilment and pick/pack/ship workflows</li>
+              <li>Multi-warehouse and multi-location support</li>
+              <li>Barcode / QR code scanning integration</li>
+              <li>Inbound and outbound shipment management</li>
+              <li>Returns and reverse logistics handling</li>
+            </ul>
+          </div>
+          <div class="feature-group">
+            <div class="feature-group-title">Built on Cloud-Native Stack</div>
+            <ul class="feature-list">
+              <li>AWS-hosted with auto-scaling architecture</li>
+              <li>Real-time dashboards and reporting</li>
+              <li>REST API for ERP / e-commerce integrations</li>
+              <li>Role-based access control and audit logs</li>
+              <li>Mobile-friendly interface for warehouse floor</li>
+              <li>SLA-backed uptime and enterprise support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-cta">
+          <div class="product-cta-text">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:8px;">Interested in early access?</div>
+            <div style="font-size:0.9rem;color:var(--muted2);">We're onboarding select design partners. Get early access, influence the roadmap, and lock in founder pricing.</div>
+          </div>
+          <a href="/contact" class="btn-primary">Request Early Access →</a>
+        </div>
+      </div>
+
+      <!-- More products placeholder -->
+      <div style="margin-top:48px;padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:14px;text-align:center;" class="reveal">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">More Products</div>
+        <p style="color:var(--muted2);font-size:0.92rem;max-width:480px;margin:0 auto;">Additional products are in development. All built on the same enterprise-grade principles. <a href="/contact" style="color:var(--cyan);text-decoration:none;">Contact us</a> if you have a specific use case in mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .product-card { background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden; }
+  .product-header { display:flex;gap:24px;align-items:flex-start;padding:40px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#040C1C 0%,#071830 100%); }
+  .product-icon { font-size:3rem;flex-shrink:0; }
+  .product-tag { font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--cyan);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px; }
+  .product-name { font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px; }
+  .product-badge { display:inline-block;background:var(--gold-dim);border:1px solid rgba(245,200,66,0.25);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:4px 14px;border-radius:100px; }
+  .product-desc { font-size:1rem;color:var(--muted2);line-height:1.8;padding:32px 40px;border-bottom:1px solid var(--border); }
+  .product-features { display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--border); }
+  .feature-group { padding:32px 40px;border-right:1px solid var(--border); }
+  .feature-group:last-child { border-right:none; }
+  .feature-group-title { font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px; }
+  .feature-list { list-style:none;display:flex;flex-direction:column;gap:10px; }
+  .feature-list li { font-size:0.88rem;color:var(--muted2);display:flex;gap:10px;align-items:flex-start;line-height:1.5; }
+  .feature-list li::before { content:'→';color:var(--cyan);font-family:'JetBrains Mono',monospace;font-size:0.78rem;flex-shrink:0;margin-top:1px; }
+  .product-cta { display:flex;align-items:center;justify-content:space-between;gap:32px;padding:32px 40px; }
+  @media(max-width:960px){
+    .product-features{grid-template-columns:1fr;}
+    .feature-group{border-right:none;border-bottom:1px solid var(--border);}
+    .product-cta{flex-direction:column;align-items:flex-start;}
+  }
+</style>

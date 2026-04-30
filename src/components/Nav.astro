@@ -1,0 +1,20 @@
+---
+const pathname = Astro.url.pathname;
+const isActive = (path: string) => pathname === path || pathname === path + '/';
+---
+
+<nav>
+  <a href="/" class="nav-logo">Accelli<span class="tec">Tec</span></a>
+  <ul class="nav-center">
+    <li><a href="/" class={isActive('/') ? 'active' : ''}>Home</a></li>
+    <li><a href="/services" class={isActive('/services') ? 'active' : ''}>Services</a></li>
+    <li><a href="/training" class={isActive('/training') ? 'active' : ''}>Training</a></li>
+    <li><a href="/products" class={isActive('/products') ? 'active' : ''}>Products</a></li>
+    <li><a href="/webinar" class={isActive('/webinar') ? 'active' : ''}>Live Webinar</a></li>
+    <li><a href="/contact" class={isActive('/contact') ? 'active' : ''}>Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-pill">● Now Onboarding Clients</span>
+    <a href="https://calendly.com/accellitec" target="_blank" rel="noopener" class="nav-cta">Book a Free Call</a>
+  </div>
+</nav>

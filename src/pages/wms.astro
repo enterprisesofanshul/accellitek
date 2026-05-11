@@ -5,16 +5,28 @@ import Footer from '../components/Footer.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AccelliTec WMS",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Cloud",
-  "description": "Purpose-built WMS for telecom and broadband operators. Track equipment lifecycle from receipt to write-off with full audit trail. Free 60-day pilot available.",
-  "provider": { "@type": "Organization", "name": "AccelliTec", "url": "https://accellitec.com" },
-  "offers": [
-    { "@type": "Offer", "name": "Pilot", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
-    { "@type": "Offer", "name": "Starter", "price": "25000", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
-    { "@type": "Offer", "name": "Growth", "price": "40000", "priceCurrency": "INR", "availability": "https://schema.org/InStock" }
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "AccelliTec WMS",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud",
+      "description": "Purpose-built WMS for telecom and broadband operators. Track equipment lifecycle from receipt to write-off with full audit trail. Free 60-day pilot available.",
+      "provider": { "@type": "Organization", "name": "AccelliTec", "url": "https://accellitec.com" },
+      "offers": [
+        { "@type": "Offer", "name": "Pilot", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Starter", "price": "25000", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Growth", "price": "40000", "priceCurrency": "INR", "availability": "https://schema.org/InStock" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://accellitec.com" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://accellitec.com/products" },
+        { "@type": "ListItem", "position": 3, "name": "AccelliTec WMS", "item": "https://accellitec.com/wms" }
+      ]
+    }
   ]
 };
 ---

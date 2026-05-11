@@ -1,0 +1,511 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AccelliTec WMS",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cloud",
+  "description": "Purpose-built WMS for telecom and broadband operators. Track equipment lifecycle from receipt to write-off with full audit trail. Free 60-day pilot available.",
+  "provider": { "@type": "Organization", "name": "AccelliTec", "url": "https://accellitec.com" },
+  "offers": [
+    { "@type": "Offer", "name": "Pilot", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "Starter", "price": "25000", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+    { "@type": "Offer", "name": "Growth", "price": "40000", "priceCurrency": "INR", "availability": "https://schema.org/InStock" }
+  ]
+};
+---
+
+<Layout
+  title="AccelliTec WMS — Warehouse Management for Telecom Operators"
+  description="Purpose-built WMS for telecom and broadband operators. Track equipment lifecycle from receipt to write-off with full audit trail. Free 60-day pilot available."
+  canonical="/wms"
+  schema={schema}
+>
+  <Nav />
+
+  <!-- ─── HERO ─── -->
+  <section>
+    <div class="wrap">
+      <a href="/products" class="back-link reveal">← All Products</a>
+      <p class="s-label reveal" style="margin-top:24px;">AccelliTec WMS</p>
+      <h1 class="hero-title reveal">Warehouse Management<br/>Built for <span class="accent">Telecom Operators.</span></h1>
+      <p class="hero-sub reveal">Every generic WMS was designed for retail or manufacturing. AccelliTec WMS was built around how telecom field operations actually work — from equipment receipt to write-off, with a complete audit trail.</p>
+      <div class="hero-ctas reveal">
+        <a href="#pilot" class="btn-primary">Apply for Pilot — It's Free</a>
+        <a href="/contact" class="btn-ghost">Book a Demo →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROBLEM ─── -->
+  <section class="alt-section">
+    <div class="wrap">
+      <p class="s-label reveal">The Problem</p>
+      <h2 class="s-title reveal">The Problem With Generic WMS.</h2>
+      <div class="three-grid reveal-grid">
+        <div class="problem-card reveal d1">
+          <div class="problem-num">01</div>
+          <h3 class="problem-title">Ghost Inventory</h3>
+          <p class="problem-desc">Assets written off in the field but still on the books, inflating your asset register and creating audit exposure.</p>
+        </div>
+        <div class="problem-card reveal d2">
+          <div class="problem-num">02</div>
+          <h3 class="problem-title">No Telecom Workflow</h3>
+          <p class="problem-desc">Generic systems track SKUs and shelf bins. Your world is serial numbers, field kits, and CPE devices across multiple sites.</p>
+        </div>
+        <div class="problem-card reveal d3">
+          <div class="problem-num">03</div>
+          <h3 class="problem-title">Broken Audit Trails</h3>
+          <p class="problem-desc">Without a structured write-off process, finance and operations can never agree on what's actually in stock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LIFECYCLE ─── -->
+  <section>
+    <div class="wrap">
+      <p class="s-label reveal">How It Works</p>
+      <h2 class="s-title reveal">The Complete Equipment Lifecycle.</h2>
+      <div class="lifecycle reveal">
+        <div class="lc-step">
+          <div class="lc-num">01</div>
+          <div class="lc-icon">📥</div>
+          <div class="lc-name">Receipt</div>
+          <p class="lc-desc">Log incoming equipment with serial number verification and supplier details</p>
+        </div>
+        <div class="lc-step">
+          <div class="lc-num">02</div>
+          <div class="lc-icon">📦</div>
+          <div class="lc-name">Putaway</div>
+          <p class="lc-desc">Assign to warehouse location and update live inventory counts immediately</p>
+        </div>
+        <div class="lc-step">
+          <div class="lc-num">03</div>
+          <div class="lc-icon">🚚</div>
+          <div class="lc-name">Dispatch</div>
+          <p class="lc-desc">Issue field kits to technicians with full tracking and digital acknowledgement</p>
+        </div>
+        <div class="lc-step">
+          <div class="lc-num">04</div>
+          <div class="lc-icon">↩️</div>
+          <div class="lc-name">Field Return</div>
+          <p class="lc-desc">Receive returned equipment and reconcile against dispatch records</p>
+        </div>
+        <div class="lc-step lc-step--last">
+          <div class="lc-num">05</div>
+          <div class="lc-icon">📋</div>
+          <div class="lc-name">Write-Off</div>
+          <p class="lc-desc">Structured disposal with reason codes, approvals, and a permanent audit record</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─── -->
+  <section class="alt-section">
+    <div class="wrap">
+      <p class="s-label reveal">Features</p>
+      <h2 class="s-title reveal">Built for How You Actually Work.</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal d1">
+          <div class="fc-icon">🗺️</div>
+          <h3 class="fc-title">Multi-Location Visibility</h3>
+          <p class="fc-desc">Real-time inventory across all warehouses and storage locations from a single dashboard.</p>
+        </div>
+        <div class="feature-card reveal d2">
+          <div class="fc-icon">🔢</div>
+          <h3 class="fc-title">Serial Number Tracking</h3>
+          <p class="fc-desc">Track every asset by serial number — not just SKUs. Know exactly where each device is at all times.</p>
+        </div>
+        <div class="feature-card reveal d3">
+          <div class="fc-icon">✅</div>
+          <h3 class="fc-title">Structured Write-Off</h3>
+          <p class="fc-desc">Reason codes, manager approvals, and a full paper trail for every asset removed from inventory.</p>
+        </div>
+        <div class="feature-card reveal d1">
+          <div class="fc-icon">📜</div>
+          <h3 class="fc-title">Complete Audit Trail</h3>
+          <p class="fc-desc">Every movement logged — who did what, when, and why. Finance and ops finally on the same page.</p>
+        </div>
+        <div class="feature-card reveal d2">
+          <div class="fc-icon">👥</div>
+          <h3 class="fc-title">Role-Based Access</h3>
+          <p class="fc-desc">Separate permissions for warehouse operators, managers, and admins. Right access for the right people.</p>
+        </div>
+        <div class="feature-card reveal d3">
+          <div class="fc-icon">🧰</div>
+          <h3 class="fc-title">Field Kit Management</h3>
+          <p class="fc-desc">Dispatch and return management for field kits. Track what left, what came back, and what's unaccounted for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRICING ─── -->
+  <section>
+    <div class="wrap">
+      <p class="s-label reveal">Pricing</p>
+      <h2 class="s-title reveal">Simple, Transparent Pricing.</h2>
+      <div class="pricing-grid reveal">
+        <div class="pricing-card">
+          <div class="pc-plan">Pilot</div>
+          <div class="pc-price">Free</div>
+          <div class="pc-meta">60 days</div>
+          <ul class="pc-list">
+            <li>2 locations</li>
+            <li>10 users</li>
+            <li>Full product access</li>
+            <li>Direct roadmap input</li>
+          </ul>
+          <a href="#pilot" class="btn-primary pc-cta">Apply for Pilot</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pc-plan">Starter</div>
+          <div class="pc-price">₹25,000<span class="pc-per">/mo</span></div>
+          <div class="pc-meta">~USD 300</div>
+          <ul class="pc-list">
+            <li>1 warehouse</li>
+            <li>8 users</li>
+            <li>Full features</li>
+            <li>Email support</li>
+          </ul>
+          <a href="/contact" class="btn-ghost pc-cta">Get Started</a>
+        </div>
+        <div class="pricing-card pricing-featured">
+          <div class="pc-recommend">Recommended</div>
+          <div class="pc-plan">Growth</div>
+          <div class="pc-price">₹40,000<span class="pc-per">/mo</span></div>
+          <div class="pc-meta">~USD 480</div>
+          <ul class="pc-list">
+            <li>Up to 3 warehouses</li>
+            <li>20 users</li>
+            <li>Full features</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="/contact" class="btn-primary pc-cta">Get Started</a>
+        </div>
+      </div>
+      <p class="pricing-note reveal">Founder pricing — locked for first 5 customers. Pricing increases at general availability.</p>
+    </div>
+  </section>
+
+  <!-- ─── PILOT CTA ─── -->
+  <section id="pilot" class="alt-section">
+    <div class="wrap">
+      <div class="pilot-inner">
+        <div class="pilot-copy">
+          <p class="s-label reveal">Pilot Program</p>
+          <h2 class="s-title reveal">Become a Founding<br/>Pilot Partner.</h2>
+          <p class="pilot-body reveal">We're onboarding 2–3 telecom operators for a free 60-day pilot. Full product access. Direct input into the roadmap. Zero cost, zero commitment.</p>
+          <ul class="pilot-perks reveal">
+            <li>Free for 60 days — no card required</li>
+            <li>Full access to all features</li>
+            <li>Direct line to the product team</li>
+            <li>Founder pricing locked in after pilot</li>
+          </ul>
+        </div>
+        <div class="pilot-form-wrap reveal d2">
+          <form name="wms-pilot" method="POST" data-netlify="true" netlify>
+            <input type="hidden" name="form-name" value="wms-pilot" />
+            <div class="fg">
+              <label for="pname">Full Name</label>
+              <input type="text" id="pname" name="name" required placeholder="Your full name" />
+            </div>
+            <div class="fg">
+              <label for="pcompany">Company</label>
+              <input type="text" id="pcompany" name="company" required placeholder="Your company name" />
+            </div>
+            <div class="fg">
+              <label for="prole">Role</label>
+              <input type="text" id="prole" name="role" required placeholder="e.g. VP Operations, IT Manager" />
+            </div>
+            <div class="fg">
+              <label for="plocations">Number of Warehouse Locations</label>
+              <input type="number" id="plocations" name="locations" required min="1" placeholder="e.g. 3" />
+            </div>
+            <button type="submit" class="btn-submit">Apply for the Pilot →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+  <div class="wms-bar">
+    <div class="wms-bar-inner">
+      <span>Already a pilot partner? <a href="https://wms.accellitec.com" target="_blank" rel="noopener">Login at wms.accellitec.com</a></span>
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="/">accellitec.com</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <span>Built by AccelliTec, Gurugram, India</span>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* ── HERO ── */
+  .back-link {
+    display: inline-flex; align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.06em;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.2s; padding-top: 20px;
+  }
+  .back-link:hover { color: var(--cyan); }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 800; letter-spacing: -0.03em;
+    line-height: 1.06; margin: 10px 0 20px;
+  }
+  .accent { color: var(--cyan); }
+
+  .hero-sub {
+    color: var(--muted2); font-size: 1.05rem;
+    font-weight: 300; line-height: 1.8;
+    max-width: 620px; margin-bottom: 36px;
+  }
+
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* ── SHARED ── */
+  .alt-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── PROBLEM ── */
+  .three-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden;
+    margin-top: 48px;
+  }
+
+  .problem-card {
+    background: var(--bg); padding: 36px 32px;
+    position: relative;
+  }
+  .problem-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--red), transparent);
+  }
+
+  .problem-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem; color: var(--red);
+    letter-spacing: 0.12em; margin-bottom: 20px;
+  }
+  .problem-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .problem-desc {
+    font-size: 0.88rem; color: var(--muted); line-height: 1.75;
+  }
+
+  /* ── LIFECYCLE ── */
+  .lifecycle {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden;
+    margin-top: 56px;
+  }
+
+  .lc-step {
+    background: var(--surface);
+    padding: 32px 22px; text-align: center;
+    position: relative;
+  }
+  .lc-step::after {
+    content: '→';
+    position: absolute; right: -13px; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem; color: var(--cyan);
+    z-index: 2; line-height: 1;
+  }
+  .lc-step--last::after { display: none; }
+
+  .lc-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem; color: var(--cyan);
+    letter-spacing: 0.1em; margin-bottom: 12px;
+  }
+  .lc-icon { font-size: 1.6rem; margin-bottom: 10px; display: block; }
+  .lc-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem; font-weight: 700;
+    color: var(--text); margin-bottom: 8px;
+  }
+  .lc-desc {
+    font-size: 0.75rem; color: var(--muted); line-height: 1.6;
+  }
+
+  /* ── FEATURES ── */
+  .features-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden;
+    margin-top: 48px;
+  }
+
+  .feature-card {
+    background: var(--bg); padding: 36px 32px;
+    position: relative; transition: background 0.25s;
+  }
+  .feature-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--cyan), transparent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s;
+  }
+  .feature-card:hover::before { transform: scaleX(1); }
+  .feature-card:hover { background: var(--surface2); }
+
+  .fc-icon { font-size: 1.8rem; margin-bottom: 16px; display: block; }
+  .fc-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700; margin-bottom: 10px;
+  }
+  .fc-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+  /* ── PRICING ── */
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 56px;
+  }
+
+  .pricing-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 36px 32px;
+    display: flex; flex-direction: column;
+  }
+  .pricing-featured {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 1px var(--cyan), 0 0 48px rgba(0,200,255,0.06);
+  }
+
+  .pc-recommend {
+    display: inline-block; align-self: flex-start;
+    background: var(--cyan); color: #04080F;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 3px 12px; border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  .pc-plan {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem; color: var(--muted);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .pc-price {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem; font-weight: 800;
+    letter-spacing: -0.02em; margin-bottom: 4px;
+  }
+  .pc-per { font-size: 1rem; font-weight: 400; color: var(--muted); }
+  .pc-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem; color: var(--muted);
+    margin-bottom: 28px;
+  }
+  .pc-list {
+    list-style: none; flex: 1;
+    display: flex; flex-direction: column; gap: 10px;
+    margin-bottom: 32px;
+  }
+  .pc-list li {
+    font-size: 0.88rem; color: var(--muted2);
+    display: flex; gap: 10px; align-items: flex-start; line-height: 1.5;
+  }
+  .pc-list li::before {
+    content: '→'; color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; flex-shrink: 0; margin-top: 1px;
+  }
+  .pc-cta { text-align: center; display: block; }
+
+  .pricing-note {
+    margin-top: 24px; text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em;
+  }
+
+  /* ── PILOT ── */
+  .pilot-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: flex-start;
+  }
+  .pilot-body {
+    color: var(--muted2); font-size: 1rem;
+    line-height: 1.8; margin: 16px 0 24px;
+  }
+  .pilot-perks {
+    list-style: none; display: flex; flex-direction: column; gap: 10px;
+  }
+  .pilot-perks li {
+    font-size: 0.88rem; color: var(--muted2);
+    display: flex; gap: 10px; align-items: flex-start; line-height: 1.5;
+  }
+  .pilot-perks li::before {
+    content: '→'; color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; flex-shrink: 0; margin-top: 1px;
+  }
+  .pilot-form-wrap {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 36px;
+  }
+
+  /* ── WMS BAR ── */
+  .wms-bar {
+    background: var(--surface2);
+    border-top: 1px solid var(--border);
+    padding: 14px 48px;
+    position: relative; z-index: 1;
+  }
+  .wms-bar-inner {
+    max-width: 1120px; margin: 0 auto;
+    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem; color: var(--muted); letter-spacing: 0.04em;
+  }
+  .wms-bar-inner a { color: var(--cyan); text-decoration: none; }
+  .wms-bar-inner a:hover { text-decoration: underline; }
+  .sep { opacity: 0.35; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-grid { grid-template-columns: 1fr; }
+    .lifecycle { grid-template-columns: 1fr; }
+    .lc-step::after { display: none; }
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .pilot-inner { grid-template-columns: 1fr; gap: 40px; }
+    .wms-bar { padding: 14px 24px; }
+    .wms-bar-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
+  @media (max-width: 600px) {
+    .hero-ctas { flex-direction: column; }
+    .hero-ctas a { text-align: center; }
+    .features-grid { grid-template-columns: 1fr; }
+  }
+</style>
